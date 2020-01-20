@@ -6,23 +6,23 @@ Tool to convert files from LF to CRLF safely in C#
 
 Format:
 
-(1) �`�F�b�N���[�h���s:
+(1) チェックモード実行:
 my.exe /check $dir
-  ${dir}�Ŏw�肵���t�H���_���ċA�I�Ɍ������ăG���R�[�h�Ɗg���q���W�v���ĉ�ʂɏo�͂���
+  ${dir}で指定したフォルダを再帰的に検索してエンコードと拡張子を集計して画面に出力する
 
-(2) �ϊ����s:
+(2) 変換実行:
 my.exe $dir
 my.exe /convert $dir [${extensions-file-path}]
-  ${dir}�Ŏw�肵���t�H���_���ċA�I�Ɍ�������
-  ${extensions-file-path}�ɋL�ڂ��ꂽ�g���q�̃��X�g�Ɉ�v����t�@�C���̉��s�R�[�h��LF �� CRLF�ɕϊ�����
+  ${dir}で指定したフォルダを再帰的に検索して
+  ${extensions-file-path}に記載された拡張子のリストに一致するファイルの改行コードをLF → CRLFに変換する
 
-(3) �w���v�\��
+(3) ヘルプ表示
 my.exe /?
-  �g�����̐�����\������i"note.txt" �̓��e���R���\�[���ɕ\�������j
+  使い方の説明を表示する（"note.txt" の内容がコンソールに表示される）
 
 ## extensions.txt
 
-���̃t�@�C���Ƀt�@�C���ɕϊ��������t�@�C���̊g���q��񋓂���
+このファイルにファイルに変換したいファイルの拡張子を列挙する
 
 ```txt
 // extensions.txt
