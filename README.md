@@ -46,3 +46,9 @@ my.exe /?
 .asmdef
 .spriteatlas
 ```
+
+### 確認環境
+
+* Windows10
+* .NET 4.7.2(.NET Coreでも動く)
+* Visual Studio2019
