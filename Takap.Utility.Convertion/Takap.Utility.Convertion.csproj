@@ -43,9 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AppDef.cs" />
+    <Compile Include="Config\AppDef.cs" />
     <Compile Include="AppMain.cs" />
-    <Compile Include="EncodeUtil.cs" />
+    <Compile Include="Functions\CheckModeFunction.cs" />
+    <Compile Include="Functions\ConvertFunction.cs" />
+    <Compile Include="Utils\EncodeUtil.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
