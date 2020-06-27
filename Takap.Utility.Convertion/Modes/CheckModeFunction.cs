@@ -1,5 +1,5 @@
 ﻿//
-// (c) 2020 Takap.
+// Copyright (C) 2018 Taka All Rights Reserved.
 //
 
 using System;

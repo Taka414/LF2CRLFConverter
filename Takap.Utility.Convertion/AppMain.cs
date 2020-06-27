@@ -1,5 +1,5 @@
 ﻿//
-// (c) 2020 Takap.
+// Copyright (C) 2018 Taka All Rights Reserved.
 //
 
 using System;
@@ -8,18 +8,12 @@ using System.Reflection;
 
 namespace Takap.Utility.Convertion
 {
-    /// <summary>
-    /// メインクラス
-    /// </summary>
     internal class AppMain
     {
-        /// <summary>
-        /// メイン・エントリポイント
-        /// </summary>
         public static void Main(string[] args)
         {
             AppDomain.CurrentDomain.UnhandledException += CurrentDomain_UnhandledException;
-
+            
             string option = args[0].ToLower();
             switch (option)
             {
@@ -40,7 +34,7 @@ namespace Takap.Utility.Convertion
                 }
                 case "/?":
                 {
-                    ShowFormat();
+                    new ShowHelpFunction().ShowHelpMessage();
                     break;
                 }
                 default:
@@ -54,7 +48,7 @@ namespace Takap.Utility.Convertion
                     else
                     {
                         Console.WriteLine("<<書式エラー>>");
-                        ShowFormat();
+                        new ShowHelpFunction().ShowHelpMessage();
                     }
 
                     break;
@@ -62,9 +56,6 @@ namespace Takap.Utility.Convertion
             }
         }
 
-        /// <summary>
-        /// 未チェックエラーの表示
-        /// </summary>
         public static void CurrentDomain_UnhandledException(object sender, UnhandledExceptionEventArgs e)
         {
             Console.WriteLine(File.ReadAllText(AppDef.GetNoteTextPath(Assembly.GetExecutingAssembly())));

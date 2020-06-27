@@ -1,5 +1,5 @@
 ﻿//
-// (c) 2020 Takap.
+// (c) 2019 Takap.
 //
 
 using System.Diagnostics;
